@@ -8,6 +8,7 @@ const Dashboard = () => {
   const [weight, setWeight] = useState(null);
 
   const handleAge = (e) => {
+    
     setAge(e.target.value);
   };
   const handleGender = (e) => {
@@ -23,7 +24,7 @@ const Dashboard = () => {
   return (
     <div className="form">
       <label>Age:</label>
-      <input type="number" min="2" max="100" onChange={handleAge} />
+      <input placeholder="2-100" type="number" min="2" max="100" onChange={handleAge} />
       <br />
       <label>Gender:</label>
       <select onChange={handleGender}>

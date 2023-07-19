@@ -4,6 +4,10 @@ const Output = ({ age, gender, height, weight }) => {
   const [bmi, setBMI] = useState("Please enter all the details");
   const [type, setType] = useState("");
   const calculateBMI = () => {
+    if(age<2 || age>100 || height<24){
+      alert('Age should be from 2-100 and height should be from 24-96 inches')
+      return
+    }
     const heightMeters = height * 0.0254;
     const bmiResult = (weight / (heightMeters * heightMeters)).toFixed(2);
     setBMI(bmiResult);
